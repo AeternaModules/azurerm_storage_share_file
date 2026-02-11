@@ -20,9 +20,9 @@ EOT
     content_disposition = optional(string)
     content_encoding    = optional(string)
     content_md5         = optional(string)
-    content_type        = optional(string, "application/octet-stream")
+    content_type        = optional(string) # Default: "application/octet-stream"
     metadata            = optional(map(string))
-    path                = optional(string, "")
+    path                = optional(string) # Default: ""
     source              = optional(string)
     storage_share_id    = optional(string)
     storage_share_url   = optional(string)
