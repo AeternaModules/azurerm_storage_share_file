@@ -1,3 +1,7 @@
+output "storage_share_files_id" {
+  description = "Map of id values across all storage_share_files, keyed the same as var.storage_share_files"
+  value       = { for k, v in azurerm_storage_share_file.storage_share_files : k => v.id }
+}
 output "storage_share_files_content_disposition" {
   description = "Map of content_disposition values across all storage_share_files, keyed the same as var.storage_share_files"
   value       = { for k, v in azurerm_storage_share_file.storage_share_files : k => v.content_disposition }
