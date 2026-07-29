@@ -38,9 +38,9 @@ output "storage_share_files_source" {
   description = "Map of source values across all storage_share_files, keyed the same as var.storage_share_files"
   value       = { for k, v in azurerm_storage_share_file.storage_share_files : k => v.source if v.source != null && length(v.source) > 0 }
 }
-output "storage_share_files_storage_share_id" {
-  description = "Map of storage_share_id values across all storage_share_files, keyed the same as var.storage_share_files"
-  value       = { for k, v in azurerm_storage_share_file.storage_share_files : k => v.storage_share_id if v.storage_share_id != null && length(v.storage_share_id) > 0 }
+output "storage_share_files_source_content" {
+  description = "Map of source_content values across all storage_share_files, keyed the same as var.storage_share_files"
+  value       = { for k, v in azurerm_storage_share_file.storage_share_files : k => v.source_content if v.source_content != null && length(v.source_content) > 0 }
 }
 output "storage_share_files_storage_share_url" {
   description = "Map of storage_share_url values across all storage_share_files, keyed the same as var.storage_share_files"
